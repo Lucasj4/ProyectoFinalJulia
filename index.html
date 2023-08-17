@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        
+        <nav class="navbar">
+           <p class="navbar__text">CoderHouse Shoes</p>
+           <div>
+               <ul>
+                   <li class="submenu">
+                       <img src="images/car.svg" alt="">
+                       <div class="carrito">
+                           <table class="carrito__lista">
+                               <thead>
+                                   <tr>
+                                       <th> Imagen </th>
+                                       <th> Nombre </th>
+                                       <th>Precio</th>
+                                       <th>Cantidad</th>
+                                       <th></th>
+                                   </tr>
+                               </thead>
+                               <tbody>
+   
+                               </tbody>
+                           </table>
+                           <a href="" class="carrito__vaciar">Vaciar Carrito</a>
+                       </div>
+                   </li>
+                  
+               </ul>
+           </div>
+        </nav>
+    </header>
+    <main>
+
+    
+    <section>
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="5000">
+                <img src="images/zapatilla1.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>First slide label</h5>
+                  <p>Some representative placeholder content for the first slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="5000">
+                <img src="images/zapatillla2.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Second slide label</h5>
+                  <p>Some representative placeholder content for the second slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="5000">
+                <img src="images/giorgio-trovato-LV_4qM5Gf9c-unsplash-transformed.png"  class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Third slide label</h5>
+                  <p>Some representative placeholder content for the third slide.</p>
+                </div>
+              </div>
+            </div>
+   
+          </div>
+    
+    </section>
+    <hr>
+
+    <!-- Slider main container -->
+
+<section class="special-offers">
+
+<h2 class="special-offers__title">Promociones</h2>
+<div class="special-offers__container">
+  <article class="special-offers__card" >
+  <div class="special-offers__card__texts">
+  <h3>Promo 1</h3>
+  <div class="special-offers__card__texts__price">
+    <span>$300</span>
+    <span>$200</span>
+  </div>
+  <a href="" id="addtocart">Agregar al carrito</a>
+  </div>
+  <img src="images/zapatilla1.png" alt="">
+
+  </article>
+  <article class="special-offers__card" >
+  <div class="special-offers__card__texts">
+  <h3>Promo 2</h3>
+  <div class="special-offers__card__texts__price">
+    <span>$300</span>
+    <span>$200</span>
+  </div>
+  <a href="" id="addtocart">Agregar al carrito</a>
+  </div>
+  <img src="images/zapatilla1.png" alt="">
+  </article>
+</div>
+
+<div class="special-offers__container">
+  <article class="special-offers__card" >
+  <div class="special-offers__card__texts">
+  <h3>Promo 3</h3>
+  <div class="special-offers__card__texts__price">
+    <span>$300</span>
+    <span>$200</span>
+  </div>
+  <a href="" id="addtocart">Agregar al carrito</a>
+  </div>
+  <img src="images/zapatilla1.png" alt="">
+  </article>
+
+  <article class="special-offers__card" >
+  <div class="special-offers__card__texts">
+  <h3>Promo 4</h3>
+  <div class="special-offers__card__texts__price">
+    <span>$300</span>
+    <span>$200</span>
+  </div>
+  <a href="" id="addtocart">Agregar al carrito</a>
+  </div>
+  <img src="images/zapatilla1.png" alt="">
+  </article>
+</div>
+
+</section>
+<section class="products">
+  <h2 class="products__title">Nuevos Productos</h2>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      
+      <div class="swiper-slide">
+        <article class="product">
+          <img src="images/zapatillla2.png" class="product__img"   alt="">
+          <h3 class="product__name">Nombre</h3>
+          <p class="product__info">Excelente calidad</p>
+          <p class="product__price">$400</p>
+          <a href="">Agregar Carrito</a>
+        </article>
+      </div>
+      <div class="swiper-slide">
+        <article class="product">
+          <img src="images/zapatillla2.png"class="product__img" alt="">
+          <h3 class="product__name">Nombre</h3>
+          <p class="product__info">Excelente calidad</p>
+          <p class="product__price">$400</p>
+          <a href="">Agregar Carrito</a>
+        </article>
+      </div>
+
+      <div class="swiper-slide">
+        <article class="product">
+          <img src="images/zapatillla2.png"class="product__img" alt="">
+          <h3 class="product__name">Nombre</h3>
+          <p class="product__info">Excelente calidad</p>
+          <p class="product__price">$400</p>
+          <a href="">Agregar Carrito</a>
+        </article>
+      </div>
+
+      <div class="swiper-slide">
+        <article class="product">
+          <img src="images/zapatillla2.png"class="product__img" alt="">
+          <h3 class="product__name">Nombre</h3>
+          <p class="product__info">Excelente calidad</p>
+          <p class="product__price">$400</p>
+          <a href="">Agregar Carrito</a>
+        </article>
+      </div>
+
+      <div class="swiper-slide">
+        <article class="product">
+          <img src="images/zapatillla2.png"class="product__img" alt="">
+          <h3 class="product__name">Nombre</h3>
+          <p class="product__info">Excelente calidad</p>
+          <p class="product__price">$400</p>
+          <a href="">Agregar Carrito</a>
+        </article>
+      </div>
+      
+      <div class="swiper-slide">
+        <article class="product">
+          <img src="images/zapatillla2.png"class="product__img" alt="">
+          <h3 class="product__name">Nombre</h3>
+          <p class="product__info">Excelente calidad</p>
+          <p class="product__price">$400</p>
+          <a href="">Agregar Carrito</a>
+        </article>
+      </div>
+
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <p>Copyright © 2023 Lucas Juliá. All Rights Reserved.</p>
+</footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+    <script src="js/entrega.js"></script>
+</body>
+</html>

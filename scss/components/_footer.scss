@@ -1,0 +1,15 @@
+.footer{
+    background-color: $violet;
+    height: 80px;
+    @include flexbox(row, center,center,wrap, 0);
+
+}
+
+.footer{
+    & p{
+        @include fonts(1rem, 'Poppins', 700, #feffff);
+        margin-bottom: 0;
+    }
+   
+    
+}

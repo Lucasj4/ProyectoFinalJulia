@@ -1,0 +1,219 @@
+body{
+    background-color: #35155D;
+    
+}
+hr{
+    color: $blue;
+}
+.navbar{
+    width: 90%;
+    margin: 0 auto;
+    padding: 2rem;
+    &__text{
+        @include fonts(2rem, 'Poppins', 700, #fff)
+    }
+}
+.submenu{
+    position: relative;
+    &:hover .carrito{
+        display: block;
+        position: absolute;
+        right: 0;
+        backdrop-filter: blur(10px);
+        top: 100%;
+        z-index: 1;
+        background-color: $violet;
+        padding: 20px;
+        min-width: 400px;
+    }
+}
+
+
+.carrito{
+    display: none;
+    &__lista{
+        width: 100%;
+        & th, td{
+            @include fonts(1rem, 'Poppins', 500, #fff)
+        }
+    }
+    &__vaciar{
+        background-color: $light_blue;
+        margin-top: 20rem;
+        padding: 5px 10px;
+        text-decoration: none;
+        color: #feffff;
+    }
+}
+
+.slider{
+    width: 50%;
+    margin: 0 auto;
+    
+
+    &__item{
+        width: 100%;
+        @include flexbox(row, space-around,center,wrap, 10);
+        
+    }
+    &__item__text{
+        width: 50%;
+        
+    }
+    &__item__img{
+        width: 50%;
+        height: 200px;
+        object-fit: cover;
+    }
+}
+
+.carousel{
+    width: 50%;
+    margin: 0 auto;
+    height: 800px;
+}
+
+
+.carousel-item img{
+    margin-bottom:5rem;
+    height: 600px;
+    width: 100%;
+
+}
+
+.swiper {
+    width: 1000px;
+    height: 600px;
+}
+
+.swiper__items{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    &__img{
+        width: 50%;
+    }
+    &__texts{
+        @include fonts(2rem, 'Poppins', 500, #feffff);
+        text-align: center;
+        &__price{
+            @include flexbox(row, space-around,center,wrap, 0);
+            @include fonts(1.5rem, 'Poppins', 400, $blue);
+            margin-bottom: 1rem;
+            & span:nth-child(1){
+                text-decoration: line-through;
+            }
+            
+        }
+        & a{
+            text-decoration: none;
+            @include fonts(1.3rem, 'Poppins', 500, #feffff);
+            background-color: $blue;
+            color: #feffff;
+            border: 1 px solid;
+            padding: 5px 10px;
+            border-radius: 10px;
+        }
+    }
+
+}
+
+.special-offers{
+    width: 90%;
+    margin: 0 auto;
+    &__title{
+        @include fonts(3rem, 'Poppins', 700, #feffff);
+        text-align: center;
+        padding: 2rem;
+    }
+    &__container{
+        width: 100%;
+        @include flexbox(row, space-between,center,wrap, 30);
+        margin-bottom: 5rem; 
+    }
+    &__card{
+        width: 30%;
+        
+        margin: 0 auto;
+        @include flexbox(row, center,center,wrap, 0);
+        &__texts{
+            width: 50%;
+            height: inherit;
+            @include flexbox(column, center,center,wrap, 0);
+        }
+        & h3{
+            @include fonts(2rem, 'Poppins', 700, #feffff);
+        }
+        img{
+            width: 50%;
+           
+            margin: 0 auto;
+            
+        }
+        &__texts__price{
+            @include flexbox(row, start,center,wrap, 0);
+            @include fonts(1.5rem, 'Poppins', 400, $blue);
+            margin-bottom: 1.5rem;
+            & span:nth-child(1){
+                text-decoration: line-through;
+                margin-right: 1rem;
+            }
+            
+        }
+        & a{
+            text-decoration: none;
+            @include fonts(1.5rem, 'Poppins', 400, $text_color);
+            border: 1px solid $blue;
+            padding: 5px 15px;
+            border-radius: 15px;
+            &:hover{
+                background-color: $blue;
+            }
+        }
+    }
+}
+.swiper{
+    width: 90%;
+    height: 400px;
+    margin: 0 auto;
+}
+.products__title{
+    @include fonts(3rem, 'Poppins', 700, $text_color);
+    text-align: center;
+    padding: 2rem;
+}
+
+
+.product{
+    
+    @include flexbox(column, center,center,wrap, 0);
+    margin: 0 auto;
+    &__img{
+        height: 200px
+    }
+    &__name{
+        @include fonts(1.3rem, 'Poppins', 700, $text_color);
+        margin-bottom: 10px;
+    }
+    &__info{
+        @include fonts(1rem, 'Poppins', 500, #fefefe59);
+        margin-bottom: 10px
+    }
+    &__price{
+        @include fonts(1.1rem, 'Poppins', 700, $blue);
+        margin-bottom: 10px
+    }
+    & a{
+        text-decoration: none;
+        @include fonts(1.1rem, 'Poppins', 400, $text_color);
+        border: 1px solid $blue;
+        padding: 5px 15px;
+        border-radius: 15px;
+        &:hover{
+            background-color: $blue;
+        }
+    }
+}
+.swiper-button-next{
+    color: #feffff;
+}
