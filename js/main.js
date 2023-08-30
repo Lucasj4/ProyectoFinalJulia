@@ -1,65 +1,120 @@
-let importe = prompt("Ingrese importe de venta");
+//variables
+const carrito = document.querySelector('.carrito');
+const contenedorCarrito = document.querySelector('.carrito__lista tbody');
+const ofertas = document.querySelector('.special-offers');
+const productos = document.querySelector('.products')
+const vaciarCarritoBtn = document.querySelector('.carrito__vaciar');
 
-let importeTotal;
+let articulos = [];
 
-const descuento = (importe, descuento) => {
-    let totalDescuento = importe * descuento;
-    return totalDescuento
-}
+cargarEventListeners();
 
-const interesCuotas = (cuotas, importe) => {
-    let importeTotal
+function cargarEventListeners(){
+    ofertas.addEventListener('click', agregarProducto);
 
-    if(cuotas === 3){
-         importeTotal = importe * 1.05
-    }
-    if(cuotas === 6){
-         importeTotal = importe * 1.15
-    }
+    productos.addEventListener('click', agregarProducto);
 
-    return importeTotal
-}
+    carrito.addEventListener('click', eliminarProducto);
 
+    vaciarCarritoBtn.addEventListener('click', vaciarCarrito);
 
-while (parseFloat(importe)!== 0) {
-    let metodoDePago = prompt("Ingrese metodo de pago: 1-Efectivo 2-Tarjeta de credito");
-    switch (parseInt(metodoDePago)) {
-        case 1:
-            if (importe < 5000) {
-                importeTotal = importe;
-                alert(`El importe a pagar es: ${importeTotal}`);
-            } else if (importe >= 5000 && importe < 10000) {
-                let descuentoTotal = descuento(importe, 0.05);
-                importeTotal = importe - descuentoTotal;
-                alert(`El importe a pagar es: ${importeTotal}`);
-            } else if (importe >= 10000 && importe < 20000) {
-                let descuentoTotal = descuento(importe, 0.1);
-                importeTotal = importe - descuentoTotal;
-                alert(`El importe a pagar es: ${importeTotal}`);
-            } else {
-                let descuentoTotal = descuento(importe, 0.15);
-                importeTotal = importe - descuentoTotal;
-                alert(`El importe a pagar es: ${importeTotal}`);
-            }
-            break;
-        case 2:
-            let cuotas = prompt("Ingrese cantidad de cuotas: 3 o 6");
-            if (cuotas === "3") {
-                importeTotal = interesCuotas(3, importe);
-                alert(`El importe a pagar es: ${importeTotal}`);
-            } else if (cuotas === "6") {
-                importeTotal = interesCuotas(6, importe);
-                alert(`El importe a pagar es: ${importeTotal}`);
-            } else {
-                alert("Cantidad de cuotas incorrecta");
-            }
-            break;
-        default:
-            alert("Ingreso un número incorrecto");
-            break;
-    }
+    document.addEventListener('DOMContentLoaded', () => {
+        articulos = JSON.parse(localStorage.getItem('carrito')) || [];
+        console.log(articulos)
+        carritoHTML();
 
-    importe = prompt("Ingrese importe de venta");
+    })
+
    
+
 }
-alert("adios")
+
+//Funcion para agregar productos
+
+function agregarProducto(e){
+    e.preventDefault();
+    if(e.target.classList.contains('addtocart')){
+        const productoSeleccionado = e.target.parentElement.parentElement;
+        leerDatos(productoSeleccionado);
+        
+    }  
+    
+}
+// Elimina el producto del carrito en el DOM
+function eliminarProducto(e){
+    if(e.target.classList.contains('borrar-curso')){
+        const productoId = e.target.getAttribute('data-id');
+
+        articulos = articulos.filter(producto => producto.id !== productoId);
+
+        carritoHTML();
+    }
+}
+// Lee los datos del producto
+function leerDatos(producto){
+
+    const infoProducto = {
+        imagen: producto.querySelector('img').src,
+        nombre: producto.querySelector('h3').textContent,
+        precio: producto.querySelector('.price').textContent,
+        id: producto.querySelector('a').getAttribute('data-id'),
+        cantidad: 1
+
+    }
+
+    const productoRepetido = articulos.some(producto => producto.id === infoProducto.id);
+
+    if(productoRepetido){
+        const productos = articulos.map(producto => {
+            if(producto.id === infoProducto.id){
+                producto.cantidad++;
+                return producto;
+            }else{
+                return producto;
+            }
+        })
+        articulos = [...productos]
+    }else{
+        articulos = [...articulos, infoProducto];
+    }
+    
+    carritoHTML();
+    
+}
+// Muestra el producto seleccionado en el Carrito
+function carritoHTML(){
+
+    vaciarCarrito();
+    
+    articulos.forEach(producto => {
+        const {imagen, nombre, precio, cantidad, id} = producto;
+        const row = document.createElement('tr');
+          row.innerHTML = `
+               <td>  
+                    <img src="${imagen}" width=100>
+               </td>
+               <td>${nombre}</td>
+               <td>${precio}</td>
+               <td>${cantidad} </td>
+               <td>
+                    <a href="#" class="borrar-curso" data-id="${id}">X</a>
+               </td>
+          `;
+          contenedorCarrito.appendChild(row);
+    })
+
+    sincronizarStorage();
+    
+}
+
+function sincronizarStorage(){
+    localStorage.setItem('carrito', JSON.stringify(articulos));
+}
+// Elimina los cursos del carrito en el DOM
+function vaciarCarrito() {
+
+    while(contenedorCarrito.firstChild) {
+         contenedorCarrito.removeChild(contenedorCarrito.firstChild);
+     }
+}
+

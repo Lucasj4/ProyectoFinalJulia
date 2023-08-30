@@ -69,22 +69,84 @@ hr {
 
 .carrito {
   display: none;
+  border-radius: 0.5rem;
 }
 .carrito__lista {
-  width: 100%;
+  width: auto;
 }
-.carrito__lista th, .carrito__lista td {
-  font-size: 1rem;
+.carrito__lista thead tr {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0;
+}
+.carrito__lista thead th {
+  font-size: 1.2rem;
   font-family: "Poppins";
   font-weight: 500;
   color: #fff;
+  width: 8rem;
+  padding: 0.5rem 0;
+  text-align: center;
+}
+.carrito__lista tbody {
+  width: auto;
+}
+.carrito__lista tbody tr {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 5;
+  height: 70px;
+  border-bottom: 1px solid #4477CE;
+}
+.carrito__lista tbody td {
+  font-size: 1.2rem;
+  font-family: "Poppins";
+  font-weight: 500;
+  color: #feffff;
+  width: 8rem;
+  text-align: center;
+}
+.carrito__lista tbody td img {
+  width: 70px;
+  height: 60px;
+}
+.carrito__lista__eliminar {
+  text-decoration: none;
+}
+.carrito__container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0;
+  padding: 20px 0;
 }
 .carrito__vaciar {
   background-color: #8CABFF;
-  margin-top: 20rem;
-  padding: 5px 10px;
+  margin: 0 auto;
+  padding: 10px 10px;
   text-decoration: none;
   color: #feffff;
+  width: 100%;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.borrar-curso {
+  text-decoration: none;
+  background-color: #4477CE;
+  color: #feffff;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
 }
 
 .slider {

@@ -31,21 +31,80 @@ hr{
 
 .carrito{
     display: none;
+    border-radius: 0.5rem;
+    
     &__lista{
-        width: 100%;
-        & th, td{
-            @include fonts(1rem, 'Poppins', 500, #fff)
+        width: auto;
+        & thead tr{
+            @include flexbox(row, start,center,nowrap, 0);
+            
+            
+            
+           
+            
         }
+        & thead th{
+            @include fonts(1.2rem, 'Poppins', 500, #fff);
+            width: 8rem;
+            padding: 0.5rem 0;
+            text-align: center;
+            
+           
+            
+        }
+        tbody{
+            width: auto;
+            & tr{
+                @include flexbox(row, center,center,nowrap, 5);
+               
+                height: 70px;
+                border-bottom: 1px solid $blue;
+                
+                
+            }
+            & td{
+                @include fonts(1.2rem, 'Poppins', 500, $text_color);
+                width: 8rem;
+                
+                & img{
+                    width: 70px;
+                    height: 60px;
+                }
+                text-align: center;
+        }
+   
+        }
+        &__eliminar{
+            text-decoration: none;
+        }
+       
+      
+    }
+    &__container{
+        width: 80%;
+        margin: 0 auto;
+        @include flexbox(row, center,center,nowrap,0 );
+        padding: 20px 0;
     }
     &__vaciar{
         background-color: $light_blue;
-        margin-top: 20rem;
-        padding: 5px 10px;
+        margin: 0 auto;
+        padding: 10px 10px;
         text-decoration: none;
         color: #feffff;
+        width: 100%;
+        text-align: center;
+        border-radius: 10px;
     }
+    
 }
-
+.borrar-curso{
+    text-decoration: none;
+    background-color: $blue;
+    color: $text_color;
+    border-radius: 0.3rem;
+    padding: 0.5rem;
+}
 .slider{
     width: 50%;
     margin: 0 auto;

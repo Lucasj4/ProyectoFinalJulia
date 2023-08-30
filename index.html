@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
-    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <title>CoderHouse</title>
 </head>
 <body>
     <header class="header">
@@ -35,7 +36,10 @@
    
                                </tbody>
                            </table>
-                           <a href="" class="carrito__vaciar">Vaciar Carrito</a>
+                           <div class="carrito__container">
+                              <a href="" class="carrito__vaciar">Vaciar Carrito</a>
+                           </div>
+                           
                        </div>
                    </li>
                   
@@ -93,9 +97,9 @@
   <h3>Promo 1</h3>
   <div class="special-offers__card__texts__price">
     <span>$300</span>
-    <span>$200</span>
+    <span class="price">$200</span>
   </div>
-  <a href="" id="addtocart">Agregar al carrito</a>
+  <a href="" class="addtocart" data-id="1">Agregar al carrito</a>
   </div>
   <img src="images/zapatilla1.png" alt="">
 
@@ -105,9 +109,9 @@
   <h3>Promo 2</h3>
   <div class="special-offers__card__texts__price">
     <span>$300</span>
-    <span>$200</span>
+    <span class="price">$200</span>
   </div>
-  <a href="" id="addtocart">Agregar al carrito</a>
+  <a href="" class="addtocart" data-id="2">Agregar al carrito</a>
   </div>
   <img src="images/zapatilla1.png" alt="">
   </article>
@@ -119,11 +123,11 @@
   <h3>Promo 3</h3>
   <div class="special-offers__card__texts__price">
     <span>$300</span>
-    <span>$200</span>
+    <span class="price">$200</span>
   </div>
-  <a href="" id="addtocart">Agregar al carrito</a>
+  <a href="" class="addtocart" data-id="3">Agregar al carrito</a>
   </div>
-  <img src="images/zapatilla1.png" alt="">
+  <img src="images/zapatilla1.png" alt="" >
   </article>
 
   <article class="special-offers__card" >
@@ -131,9 +135,9 @@
   <h3>Promo 4</h3>
   <div class="special-offers__card__texts__price">
     <span>$300</span>
-    <span>$200</span>
+    <span class="price">$200</span>
   </div>
-  <a href="" id="addtocart">Agregar al carrito</a>
+  <a href="" class="addtocart" data-id="4">Agregar al carrito</a>
   </div>
   <img src="images/zapatilla1.png" alt="">
   </article>
@@ -150,8 +154,8 @@
           <img src="images/zapatillla2.png" class="product__img"   alt="">
           <h3 class="product__name">Nombre</h3>
           <p class="product__info">Excelente calidad</p>
-          <p class="product__price">$400</p>
-          <a href="">Agregar Carrito</a>
+          <p class="product__price price">$400</p>
+          <a href="" class="addtocart" data-id="5">Agregar Carrito</a>
         </article>
       </div>
       <div class="swiper-slide">
@@ -159,18 +163,8 @@
           <img src="images/zapatillla2.png"class="product__img" alt="">
           <h3 class="product__name">Nombre</h3>
           <p class="product__info">Excelente calidad</p>
-          <p class="product__price">$400</p>
-          <a href="">Agregar Carrito</a>
-        </article>
-      </div>
-
-      <div class="swiper-slide">
-        <article class="product">
-          <img src="images/zapatillla2.png"class="product__img" alt="">
-          <h3 class="product__name">Nombre</h3>
-          <p class="product__info">Excelente calidad</p>
-          <p class="product__price">$400</p>
-          <a href="">Agregar Carrito</a>
+          <p class="product__price price">$400</p>
+          <a href="" class="addtocart" data-id="6">Agregar Carrito</a>
         </article>
       </div>
 
@@ -179,8 +173,8 @@
           <img src="images/zapatillla2.png"class="product__img" alt="">
           <h3 class="product__name">Nombre</h3>
           <p class="product__info">Excelente calidad</p>
-          <p class="product__price">$400</p>
-          <a href="">Agregar Carrito</a>
+          <p class="product__price price">$400</p>
+          <a href="" class="addtocart" data-id="7">Agregar Carrito</a>
         </article>
       </div>
 
@@ -189,8 +183,18 @@
           <img src="images/zapatillla2.png"class="product__img" alt="">
           <h3 class="product__name">Nombre</h3>
           <p class="product__info">Excelente calidad</p>
-          <p class="product__price">$400</p>
-          <a href="">Agregar Carrito</a>
+          <p class="product__price price">$400</p>
+          <a href="" class="addtocart" data-id="8">Agregar Carrito</a>
+        </article>
+      </div>
+
+      <div class="swiper-slide">
+        <article class="product">
+          <img src="images/zapatillla2.png"class="product__img" alt="">
+          <h3 class="product__name">Nombre</h3>
+          <p class="product__info">Excelente calidad</p>
+          <p class="product__price price">$400</p>
+          <a href="" class="addtocart" data-id="9">Agregar Carrito</a>
         </article>
       </div>
       
@@ -199,8 +203,8 @@
           <img src="images/zapatillla2.png"class="product__img" alt="">
           <h3 class="product__name">Nombre</h3>
           <p class="product__info">Excelente calidad</p>
-          <p class="product__price">$400</p>
-          <a href="">Agregar Carrito</a>
+          <p class="product__price price">$400</p>
+          <a href="" class="addtocart" data-id="10">Agregar Carrito</a>
         </article>
       </div>
 
@@ -217,7 +221,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-    <script src="js/script.js"></script>
+    <script src="js/main.js"></script>
     <script src="js/entrega.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
