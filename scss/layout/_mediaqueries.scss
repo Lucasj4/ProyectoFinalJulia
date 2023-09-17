@@ -1,0 +1,350 @@
+@media only screen and (max-width: 1400px){
+    .product__texts{
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        
+        @include flexbox(column, center,center,wrap, 0);
+    }
+}
+
+@media only screen and (max-width: 991px){
+    .carousel{
+        height: 400px;
+    } 
+    .carousel-inner{
+        width: 50%;
+        margin: 0 auto;
+        height: 400px;
+    }
+    .carousel-item{
+        height: 300px;
+    }
+  
+    .special-offers__card{
+        &__texts{
+        
+            & h3{
+                
+                @include fonts(1rem, 'Poppins', 500, #feffff);
+            }
+    
+            &__price{
+              
+                @include fonts(1.2rem, 'Poppins', 400, $blue);
+                margin-bottom: 0.5rem;
+                & span{
+                    
+                    margin-right: 0rem;
+                    @include fonts(1rem, 'Poppins', 400, $blue);
+                }
+                
+            }
+    
+            & a{
+                text-decoration: none;
+                @include fonts(0.8rem, 'Poppins', 400, $text_color);
+                border: 1px solid $blue;
+                padding: 5px;
+                border-radius: 15px;
+                &:hover{
+                    background-color: $blue;
+                }
+            }
+        }
+
+        img {
+            height: 150px;
+        }
+    }
+    .product{
+        height: 310px;
+        &__img{
+            height: 100px;
+            width: 100px;
+        }
+        &__texts{
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            
+            @include flexbox(column, center,center,wrap, 0);
+        }
+        &__name{
+            @include fonts(0.8rem, 'Poppins', 400, $text_color);
+            width: 70%;
+            height: 78px;
+            text-align: center;
+            padding-top: 1rem;
+        }
+        &__price{
+            @include fonts(1.1rem, 'Poppins', 700, $blue);
+           
+        }
+
+        & a{
+            text-decoration: none;
+            @include fonts(0.8rem, 'Poppins', 400, $text_color);
+            border: 1px solid $blue;
+            padding: 5px 15px;
+            border-radius: 15px;
+            &:hover{
+                background-color: $blue;
+            }
+        }
+    }
+    
+}
+
+@media only screen and (max-width:768px){
+    .submenu{
+        position: relative;
+        &:hover .carrito{
+          
+            width: 500px;
+        }
+    }
+    .carrito__lista{
+        & thead th{
+            @include fonts(0.8rem, 'Poppins', 500, #fff);
+            width: 6rem;
+          
+
+        }
+   
+        tbody{
+           
+            & tr{
+                @include flexbox(row, center,center,nowrap, 5);
+                
+                height: auto;
+                
+                
+                
+            }
+            & td{
+                @include fonts(0.8rem, 'Poppins', 500, $text_color);
+                width: 6rem;
+                
+                & img{
+                    width: 50px;
+                    height: 50px;
+                    margin: 0.5rem 0;
+                }
+                text-align: center;
+            }
+        }
+
+    }
+    .special-offers__card{
+        &__texts{
+        
+            & h3{
+                
+                @include fonts(0.7rem, 'Poppins', 500, #feffff);
+            }
+    
+            &__price{
+              
+                
+                margin-bottom: 0.5rem;
+                & span{
+                    
+                    margin-right: 0rem;
+                    @include fonts(0.7rem, 'Poppins', 400, $blue);
+                }
+                
+            }
+    
+            & a{
+                text-decoration: none;
+                @include fonts(0.7rem, 'Poppins', 400, $text_color);
+                border: 1px solid $blue;
+                padding: 5px;
+                text-align: center;
+                border-radius: 15px;
+                &:hover{
+                    background-color: $blue;
+                }
+            }
+        }
+
+        img {
+            height: 150px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar{
+        @include flexbox(column, center,center,nowrap, 0);
+        &__text{
+            @include fonts(1rem, 'Poppins', 700, #fff)
+        }
+    }
+    .submenu{
+        position: relative;
+        
+        &:hover .carrito{
+         
+            right: 50%; /* Centramos horizontalmente respecto al .submenu */
+            transform: translateX(50%); 
+            width: auto;
+            
+       
+        }
+    }
+    .carrito__lista{
+        thead th{
+            @include fonts(0.6rem, 'Poppins', 500, #fff);
+            width: 50px;
+          
+
+        }
+   
+        tbody{
+           
+            & tr{
+                @include flexbox(row, center,center,nowrap, 5);
+                
+                height: auto;
+                
+                
+                
+            }
+            & td{
+                @include fonts(0.6rem, 'Poppins', 500, $text_color);
+                width: 50px;
+                
+                & img{
+                    width: 30px;
+                    height: 30px;
+                    margin: 0.5rem 0;
+                }
+                text-align: center;
+            }
+        }
+
+    }
+
+    .carrito__vaciar__btn{
+        background-color: $light_blue;
+        margin: 0 auto;
+        padding: 5px 5px;
+        text-decoration: none;
+        color: #feffff;
+        width: 100%;
+        text-align: center;
+        border-radius: 10px;
+        @include fonts(0.6rem, 'Poppins', 500, $text_color);
+    }
+    .borrar-curso{
+        text-decoration: none;
+        background-color: $blue;
+        color: $text_color;
+        border-radius: 0.3rem;
+        padding: 0.2rem;
+    }
+
+    .special-offers{
+        width: 90%;
+        margin: 0 auto;
+
+        &__container{
+            @include flexbox(column, center,center,wrap, 30);
+        }
+        &__title{
+            @include fonts(1.5rem, 'Poppins', 700, #feffff);
+            text-align: center;
+            padding: 2rem;
+        }
+        &__card{
+            width: 100%;
+            &__texts{
+            
+                & h3{
+                    
+                    @include fonts(0.7rem, 'Poppins', 500, #feffff);
+                }
+        
+                &__price{
+                  
+                    
+                    margin-bottom: 0.5rem;
+                    & span{
+                        
+                        margin-right: 0rem;
+                        @include fonts(0.7rem, 'Poppins', 400, $blue);
+                    }
+                    
+                }
+        
+                & a{
+                    text-decoration: none;
+                    @include fonts(0.7rem, 'Poppins', 400, $text_color);
+                    border: 1px solid $blue;
+                    padding: 5px;
+                    text-align: center;
+                    border-radius: 15px;
+                    &:hover{
+                        background-color: $blue;
+                    }
+                }
+            }
+    
+            img {
+                height: 100px;
+                width: 90px;
+            }
+        }
+        }
+        .products__title{
+            @include fonts(1.5rem, 'Poppins', 700, #feffff);
+        }
+        .product{
+            height: 310px;
+      
+            &__img{
+                height: 50px;
+                width: 50px;
+            }
+            &__texts{
+                width: 100%;
+                margin: 0 auto;
+                text-align: center;
+                
+                @include flexbox(column, center,center,wrap, 0);
+            }
+            &__name{
+                @include fonts(0.7rem, 'Poppins', 400, $text_color);
+                width: 70%;
+                height: 85px;
+                text-align: center;
+                padding-top: 1rem;
+            }
+            &__price{
+                @include fonts(0.7rem, 'Poppins', 700, $blue);
+               
+            }
+            &__info{
+                @include fonts(0.8rem, 'Poppins', 700,  #fefefe59);
+            }
+            & a{
+                text-decoration: none;
+                @include fonts(0.6rem, 'Poppins', 400, $text_color);
+                border: 1px solid $blue;
+                padding: 5px 15px;
+                border-radius: 15px;
+                &:hover{
+                    background-color: $blue;
+                }
+            }
+        }
+       .footer{
+        p{
+            @include fonts(0.6rem, 'Poppins', 400, $text_color);
+
+        }
+       }
+    }
+    

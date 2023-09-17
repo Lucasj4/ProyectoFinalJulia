@@ -24,7 +24,8 @@ hr{
         z-index: 1;
         background-color: $violet;
         padding: 20px;
-        min-width: 400px;
+        min-height: 400px;
+        min-width: 300px;
     }
 }
 
@@ -57,18 +58,19 @@ hr{
             & tr{
                 @include flexbox(row, center,center,nowrap, 5);
                
-                height: 70px;
+                height: auto;
                 border-bottom: 1px solid $blue;
                 
                 
             }
             & td{
-                @include fonts(1.2rem, 'Poppins', 500, $text_color);
+                @include fonts(1rem, 'Poppins', 500, $text_color);
                 width: 8rem;
                 
                 & img{
                     width: 70px;
                     height: 60px;
+                    margin: 0.5rem 0;
                 }
                 text-align: center;
         }
@@ -86,7 +88,7 @@ hr{
         @include flexbox(row, center,center,nowrap,0 );
         padding: 20px 0;
     }
-    &__vaciar{
+    &__vaciar__btn{
         background-color: $light_blue;
         margin: 0 auto;
         padding: 10px 10px;
@@ -129,14 +131,13 @@ hr{
 .carousel{
     width: 50%;
     margin: 0 auto;
-    height: 800px;
+    height: 400px;
 }
-
 
 .carousel-item img{
     margin-bottom:5rem;
-    height: 600px;
-    width: 100%;
+    height: 300px;
+    width: 30%;
 
 }
 
@@ -180,6 +181,7 @@ hr{
 .special-offers{
     width: 90%;
     margin: 0 auto;
+ 
     &__title{
         @include fonts(3rem, 'Poppins', 700, #feffff);
         text-align: center;
@@ -191,34 +193,41 @@ hr{
         margin-bottom: 5rem; 
     }
     &__card{
-        width: 30%;
+        width: 40%;
         
-        margin: 0 auto;
+        margin: 3rem auto;
         @include flexbox(row, center,center,wrap, 0);
         &__texts{
             width: 50%;
             height: inherit;
             @include flexbox(column, center,center,wrap, 0);
-        }
-        & h3{
-            @include fonts(2rem, 'Poppins', 700, #feffff);
+
+            & h3{
+                @include fonts(1.5rem, 'Poppins', 500, #feffff);
+                text-align: center;
+            }
+
+            &__price{
+                @include flexbox(row, start,center,wrap, 0);
+                @include fonts(1.5rem, 'Poppins', 400, $blue);
+                margin-bottom: 1.5rem;
+                & span:nth-child(1){
+                    text-decoration: line-through;
+                    margin-right: 1rem;
+                }
+                
+            }
+           
         }
         img{
-            width: 50%;
-           
+            width: 40%;
+            height: 200px;
             margin: 0 auto;
             
         }
-        &__texts__price{
-            @include flexbox(row, start,center,wrap, 0);
-            @include fonts(1.5rem, 'Poppins', 400, $blue);
-            margin-bottom: 1.5rem;
-            & span:nth-child(1){
-                text-decoration: line-through;
-                margin-right: 1rem;
-            }
-            
-        }
+     
+     
+
         & a{
             text-decoration: none;
             @include fonts(1.5rem, 'Poppins', 400, $text_color);
@@ -235,6 +244,11 @@ hr{
     width: 90%;
     height: 400px;
     margin: 0 auto;
+    @include flexbox(row, center,center,wrap, 0);
+    &-slide{
+        @include flexbox(row, center,center,wrap, 0);
+        width: 30%;
+    }
 }
 .products__title{
     @include fonts(3rem, 'Poppins', 700, $text_color);
@@ -248,19 +262,22 @@ hr{
     @include flexbox(column, center,center,wrap, 0);
     margin: 0 auto;
     &__img{
-        height: 200px
+        height: 150px;
+        width: 150px;
     }
     &__name{
-        @include fonts(1.3rem, 'Poppins', 700, $text_color);
-        margin-bottom: 10px;
+        @include fonts(1rem, 'Poppins', 500, $text_color);
+        width: 70%;
+        text-align: center;
+        padding-top: 1rem;
     }
     &__info{
         @include fonts(1rem, 'Poppins', 500, #fefefe59);
-        margin-bottom: 10px
+        
     }
     &__price{
         @include fonts(1.1rem, 'Poppins', 700, $blue);
-        margin-bottom: 10px
+       
     }
     & a{
         text-decoration: none;
