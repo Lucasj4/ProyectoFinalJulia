@@ -1,4 +1,4 @@
-@media only screen and (max-width: 1400px){
+@media only screen and (min-width: 992px){
     .product__texts{
         width: 100%;
         margin: 0 auto;
@@ -73,7 +73,7 @@
         &__name{
             @include fonts(0.8rem, 'Poppins', 400, $text_color);
             width: 70%;
-            height: 78px;
+            height: 60px;
             text-align: center;
             padding-top: 1rem;
         }
@@ -101,7 +101,7 @@
         position: relative;
         &:hover .carrito{
           
-            width: 500px;
+            width: auto;
         }
     }
     .carrito__lista{
@@ -317,8 +317,8 @@
             }
             &__name{
                 @include fonts(0.7rem, 'Poppins', 400, $text_color);
-                width: 70%;
-                height: 85px;
+                width: 50%;
+                height: 55px;
                 text-align: center;
                 padding-top: 1rem;
             }

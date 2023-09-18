@@ -176,12 +176,12 @@ hr {
 .carousel {
   width: 50%;
   margin: 0 auto;
-  height: 400px;
+  height: 600px;
 }
 
 .carousel-item img {
   margin-bottom: 5rem;
-  height: 300px;
+  height: 500px;
   width: 30%;
 }
 
@@ -401,7 +401,7 @@ hr {
   color: #feffff;
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (min-width: 992px) {
   .product__texts {
     width: 100%;
     margin: 0 auto;
@@ -486,7 +486,7 @@ hr {
     font-weight: 400;
     color: #feffff;
     width: 70%;
-    height: 78px;
+    height: 60px;
     text-align: center;
     padding-top: 1rem;
   }
@@ -515,7 +515,7 @@ hr {
     position: relative;
   }
   .submenu:hover .carrito {
-    width: 500px;
+    width: auto;
   }
   .carrito__lista thead th {
     font-size: 0.8rem;
@@ -739,8 +739,8 @@ hr {
     font-family: "Poppins";
     font-weight: 400;
     color: #feffff;
-    width: 70%;
-    height: 85px;
+    width: 50%;
+    height: 55px;
     text-align: center;
     padding-top: 1rem;
   }
